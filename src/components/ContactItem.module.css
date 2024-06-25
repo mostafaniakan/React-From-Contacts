@@ -1,0 +1,7 @@
+.contactItem{
+    display: flex;
+    gap: 16px;
+}
+.contactItem span{
+    padding-right: 4px;
+}
