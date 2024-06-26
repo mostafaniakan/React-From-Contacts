@@ -1,6 +1,6 @@
 import {useState} from "react";
 import ContactsList from "./ContactsList.jsx";
-
+import styles from "./Contacts.module.css";
 import inputs from "../constants/input.js"
 import {v4} from "uuid";
 
@@ -40,8 +40,8 @@ const Contacts = () => {
         setContacts(contacts => contacts.filter(item => item.id !== id));
     };
     return (
-        <div>
-            <div>
+        <div className={styles.container}>
+            <div className={styles.form}>
                 {inputs.map((input, index) => (
                     <input
                         key={index}
@@ -54,7 +54,7 @@ const Contacts = () => {
                 ))}
                 <button onClick={AddHandler}>Add Contact</button>
             </div>
-            <div>
+            <div className={styles.alert}>
                 {alert && <p>{alert}</p>}
             </div>
             <ContactsList contacts={contacts} removeContact={removeContact}/>

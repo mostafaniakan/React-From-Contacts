@@ -1,7 +1,37 @@
 .contactItem{
     display: flex;
-    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    color: #6b6b6f;
+    padding: 10px 20px;
+    margin:15px;
+    border-radius: 10px;
 }
 .contactItem span{
-    padding-right: 4px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 10px;
+    background-color: #fff;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+.contactItem p {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+.contactItem button{
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.1s all ease-in-out;
+}
+.contactItem button:hover{
+    font-size: 1.5rem;
 }
